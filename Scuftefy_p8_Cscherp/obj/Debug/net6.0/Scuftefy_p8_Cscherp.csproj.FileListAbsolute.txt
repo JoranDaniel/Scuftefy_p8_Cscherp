@@ -1,0 +1,15 @@
+C:\Users\joran\OneDrive\Documenten\ROC Nijmegen\Vakken\C#\Scuftefy_p8_Cscherp\Scuftefy_p8_Cscherp\bin\Debug\net6.0\Scuftefy_p8_Cscherp.exe
+C:\Users\joran\OneDrive\Documenten\ROC Nijmegen\Vakken\C#\Scuftefy_p8_Cscherp\Scuftefy_p8_Cscherp\bin\Debug\net6.0\Scuftefy_p8_Cscherp.deps.json
+C:\Users\joran\OneDrive\Documenten\ROC Nijmegen\Vakken\C#\Scuftefy_p8_Cscherp\Scuftefy_p8_Cscherp\bin\Debug\net6.0\Scuftefy_p8_Cscherp.runtimeconfig.json
+C:\Users\joran\OneDrive\Documenten\ROC Nijmegen\Vakken\C#\Scuftefy_p8_Cscherp\Scuftefy_p8_Cscherp\bin\Debug\net6.0\Scuftefy_p8_Cscherp.dll
+C:\Users\joran\OneDrive\Documenten\ROC Nijmegen\Vakken\C#\Scuftefy_p8_Cscherp\Scuftefy_p8_Cscherp\bin\Debug\net6.0\Scuftefy_p8_Cscherp.pdb
+C:\Users\joran\OneDrive\Documenten\ROC Nijmegen\Vakken\C#\Scuftefy_p8_Cscherp\Scuftefy_p8_Cscherp\obj\Debug\net6.0\Scuftefy_p8_Cscherp.csproj.AssemblyReference.cache
+C:\Users\joran\OneDrive\Documenten\ROC Nijmegen\Vakken\C#\Scuftefy_p8_Cscherp\Scuftefy_p8_Cscherp\obj\Debug\net6.0\Scuftefy_p8_Cscherp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joran\OneDrive\Documenten\ROC Nijmegen\Vakken\C#\Scuftefy_p8_Cscherp\Scuftefy_p8_Cscherp\obj\Debug\net6.0\Scuftefy_p8_Cscherp.AssemblyInfoInputs.cache
+C:\Users\joran\OneDrive\Documenten\ROC Nijmegen\Vakken\C#\Scuftefy_p8_Cscherp\Scuftefy_p8_Cscherp\obj\Debug\net6.0\Scuftefy_p8_Cscherp.AssemblyInfo.cs
+C:\Users\joran\OneDrive\Documenten\ROC Nijmegen\Vakken\C#\Scuftefy_p8_Cscherp\Scuftefy_p8_Cscherp\obj\Debug\net6.0\Scuftefy_p8_Cscherp.csproj.CoreCompileInputs.cache
+C:\Users\joran\OneDrive\Documenten\ROC Nijmegen\Vakken\C#\Scuftefy_p8_Cscherp\Scuftefy_p8_Cscherp\obj\Debug\net6.0\Scuftefy_p8_Cscherp.dll
+C:\Users\joran\OneDrive\Documenten\ROC Nijmegen\Vakken\C#\Scuftefy_p8_Cscherp\Scuftefy_p8_Cscherp\obj\Debug\net6.0\refint\Scuftefy_p8_Cscherp.dll
+C:\Users\joran\OneDrive\Documenten\ROC Nijmegen\Vakken\C#\Scuftefy_p8_Cscherp\Scuftefy_p8_Cscherp\obj\Debug\net6.0\Scuftefy_p8_Cscherp.pdb
+C:\Users\joran\OneDrive\Documenten\ROC Nijmegen\Vakken\C#\Scuftefy_p8_Cscherp\Scuftefy_p8_Cscherp\obj\Debug\net6.0\Scuftefy_p8_Cscherp.genruntimeconfig.cache
+C:\Users\joran\OneDrive\Documenten\ROC Nijmegen\Vakken\C#\Scuftefy_p8_Cscherp\Scuftefy_p8_Cscherp\obj\Debug\net6.0\ref\Scuftefy_p8_Cscherp.dll

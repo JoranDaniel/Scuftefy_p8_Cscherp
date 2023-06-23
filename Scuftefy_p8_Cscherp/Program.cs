@@ -4,40 +4,40 @@ using System.Runtime.CompilerServices;
 
 class Program
 {
-    static List<Playlist> playlists = new List<Playlist>();
-    static List<User> users = new List<User>();
-    static User currentUser;
+    static List<Playlist> playlists = new List<Playlist>(); // List of all playlists
+    static List<User> users = new List<User>(); // List of all users
+    static User currentUser; // The user that is currently logged in
 
-    static void Main(string[] args)
+    static void Main(string[] args) // This is the entry point of the program
     {
-        Run();
+        Run(); // Start the program
     }
 
     static void Run()
     {
-        Console.WriteLine("Welkom bij Scuftefy!");
+        Console.WriteLine("Welkom bij Scuftefy!"); 
         Console.WriteLine("Voer je gebruikersnaam in:");
-        string username = Console.ReadLine();
+        string username = Console.ReadLine(); // dit zorgt er voor dat je een gebruikersnaam kan invoeren
 
        
-        currentUser = FindUser(username);
+        currentUser = FindUser(username); // dit zorgt er voor dat je een gebruikersnaam kan vinden
 
-        if (currentUser == null)
+        if (currentUser == null) // als de gebruikersnaam niet bestaat dan wordt er een nieuwe gebruiker aangemaakt
         {
             
-            currentUser = new User(username);
-            users.Add(currentUser);
-            Console.WriteLine("Nieuwe gebruiker aangemaakt: " + currentUser.Username);
+            currentUser = new User(username); // dit zorgt er voor dat je een nieuwe gebruiker kan aanmaken
+            users.Add(currentUser); // dit zorgt er voor dat de nieuwe gebruiker wordt toegevoegd aan de lijst met gebruikers
+            Console.WriteLine("Nieuwe gebruiker aangemaakt: " + currentUser.Username); // dit zorgt er voor dat er een bericht wordt weergegeven dat er een nieuwe gebruiker is aangemaakt
         }
         else
         {
-            Console.WriteLine("Ingelogd als: " + currentUser.Username);
+            Console.WriteLine("Ingelogd als: " + currentUser.Username); // dit zorgt er voor dat er een bericht wordt weergegeven dat je bent ingelogd
         }
 
-        ShowMenu();
+        ShowMenu(); // dit zorgt er voor dat het menu wordt weergegeven
     }
 
-    static void ShowMenu()
+    static void ShowMenu() // dit zorgt er voor dat het menu wordt weergegeven
     {
         Console.WriteLine("Kies een optie:");
         Console.WriteLine("1. Album");
@@ -50,12 +50,12 @@ class Program
         Console.WriteLine("8. Vrienden");
         Console.WriteLine("9. Afsluiten");
 
-        string userInput = Console.ReadLine();
-        int choice;
+        string userInput = Console.ReadLine(); // dit zorgt er voor dat je een keuze kan maken uit het menu
+        int choice; // dit zorgt er voor dat je een keuze kan maken uit het menu
 
-        if (int.TryParse(userInput, out choice))
+        if (int.TryParse(userInput, out choice)) // dit zorgt er voor dat je een keuze kan maken uit het menu
         {
-            switch (choice)
+            switch (choice) // dit zorgt er voor dat je een keuze kan maken uit het menu
             {
                 case 1:
                     ViewAlbum();
@@ -91,13 +91,13 @@ class Program
         }
         else
         {
-            Console.WriteLine("Ongeldige invoer. Probeer het opnieuw.");
+            Console.WriteLine("Ongeldige invoer. Probeer het opnieuw."); // dit zorgt er voor dat er een bericht wordt weergegeven dat de invoer ongeldig is
         }
 
         ShowMenu();
     }
 
-    static void ViewAlbum()
+    static void ViewAlbum() // dit zorgt er voor dat je een album kan bekijken
     {
         Console.WriteLine("Je hebt gekozen voor 'Album'.");
         Console.WriteLine("Beschikbare albums:");
@@ -109,30 +109,30 @@ class Program
         Console.WriteLine("Kies een album om acties uit te voeren:");
 
        
-        int choice = int.Parse(Console.ReadLine());
+        int choice = int.Parse(Console.ReadLine()); // dit zorgt er voor dat je een album kan kiezen
 
         switch (choice)
         {
             case 1:
               
-                Console.WriteLine("Je hebt Album 1 geselecteerd.");
+                Console.WriteLine("Je hebt Album 1 geselecteerd."); // dit zorgt er voor dat je album 1 kan selecteren
 
                 Console.WriteLine("Kies een optie:");
-                Console.WriteLine("1. Voeg het album toe aan je afspeellijst");
+                Console.WriteLine("1. Voeg het album toe aan je afspeellijst"); 
                 Console.WriteLine("2. Speel het album af");
 
           
                 int albumAction = int.Parse(Console.ReadLine());
 
-                if (albumAction == 1)
+                if (albumAction == 1) // dit zorgt er voor dat je album 1 kan toevoegen aan je afspeellijst
                 {
                    
-                    Console.WriteLine("Album 1 is toegevoegd aan je afspeellijst.");
+                    Console.WriteLine("Album 1 is toegevoegd aan je afspeellijst."); // dit zorgt er voor dat er een bericht wordt weergegeven dat album 1 is toegevoegd aan je afspeellijst
                 }
-                else if (albumAction == 2)
+                else if (albumAction == 2) // dit zorgt er voor dat je album 1 kan afspelen
                 {
                  
-                    Console.WriteLine("Album 1 wordt afgespeeld.");
+                    Console.WriteLine("Album 1 wordt afgespeeld."); // dit zorgt er voor dat er een bericht wordt weergegeven dat album 1 wordt afgespeeld
                 }
                 else
                 {
@@ -149,13 +149,13 @@ class Program
                 Console.WriteLine("1. Voeg het album toe aan je afspeellijst");
                 Console.WriteLine("2. Speel het album af");
 
-                int album2Action = int.Parse(Console.ReadLine());
+                int album2Action = int.Parse(Console.ReadLine()); // dit zorgt er voor dat je album 2 kan kiezen
 
-                if (album2Action == 1)
+                if (album2Action == 1) // dit zorgt er voor dat je album 2 kan toevoegen aan je afspeellijst
                 {
                     Console.WriteLine("Album 2 is toegevoegd aan je afspeellijst.");
                 }
-                else if (album2Action == 2)
+                else if (album2Action == 2) // dit zorgt er voor dat je album 2 kan afspelen
                 {
                    
                     Console.WriteLine("Album 2 wordt afgespeeld.");
@@ -168,7 +168,7 @@ class Program
                 break;
 
             default:
-                Console.WriteLine("Ongeldige keuze. Probeer het opnieuw.");
+                Console.WriteLine("Ongeldige keuze. Probeer het opnieuw."); // dit zorgt er voor dat er een bericht wordt weergegeven dat de invoer ongeldig is
                 break;
         }
 
@@ -177,7 +177,7 @@ class Program
 
     static void RemoveSongFromPlaylist()
     {
-        Console.WriteLine("Voer de naam van de afspeellijst in:");
+        Console.WriteLine("Voer de naam van de afspeellijst in:"); // dit zorgt er voor dat je de naam van de afspeellijst kan invoeren
         string playlistName = Console.ReadLine();
 
         Console.WriteLine("Voer de naam van het nummer in dat je wilt verwijderen:");
@@ -185,44 +185,44 @@ class Program
 
         Playlist playlist = currentUser.FindPlaylist(playlistName);
 
-        if (playlist == null)
+        if (playlist == null) // dit zorgt er voor dat je de naam van de afspeellijst kan invoeren
         {
-            Console.WriteLine("Afspeellijst niet gevonden.");
+            Console.WriteLine("Afspeellijst niet gevonden."); // dit zorgt er voor dat er een bericht wordt weergegeven dat de afspeellijst niet is gevonden
             ReturnToMenu();
             return;
         }
 
-        Song song = playlist.FindSong(songName);
+        Song song = playlist.FindSong(songName); // dit zorgt er voor dat je de naam van het nummer kan invoeren
 
         if (song == null)
         {
-            Console.WriteLine("Nummer niet gevonden in de afspeellijst.");
+            Console.WriteLine("Nummer niet gevonden in de afspeellijst."); // dit zorgt er voor dat er een bericht wordt weergegeven dat het nummer niet is gevonden in de afspeellijst
             ReturnToMenu();
             return;
         }
 
         playlist.RemoveSong(song);
-        Console.WriteLine("Nummer succesvol verwijderd uit de afspeellijst.");
+        Console.WriteLine("Nummer succesvol verwijderd uit de afspeellijst."); // dit zorgt er voor dat er een bericht wordt weergegeven dat het nummer succesvol is verwijderd uit de afspeellijst
 
-        ReturnToMenu();
+        ReturnToMenu(); // dit zorgt er voor dat je terug kan naar het menu
     }
 
 
-    static void PlaySongOrPlaylist()
+    static void PlaySongOrPlaylist() // dit zorgt er voor dat je een nummer of afspeellijst kan afspelen
     {
         Console.WriteLine("Voer de naam van de playlist in:");
         string playlistName = Console.ReadLine();
 
         Playlist playlist = currentUser.FindPlaylist(playlistName);
 
-        if (playlist == null)
+        if (playlist == null) // dit zorgt er voor dat je de naam van de afspeellijst kan invoeren
         {
             Console.WriteLine("Playlist niet gevonden.");
             ReturnToMenu();
             return;
         }
 
-        Console.WriteLine("Je speelt nu af: " + playlist.Name);
+        Console.WriteLine("Je speelt nu af: " + playlist.Name);// dit zorgt er voor dat er een bericht wordt weergegeven dat je nu afspeelt
 
         Console.WriteLine("Kies een optie:");
         Console.WriteLine("1. Playlist willekeurig afspelen");
@@ -230,14 +230,14 @@ class Program
         Console.WriteLine("3. Afzonderlijk nummer afspelen");
 
         int choice;
-        if (!int.TryParse(Console.ReadLine(), out choice) || choice < 1 || choice > 3)
+        if (!int.TryParse(Console.ReadLine(), out choice) || choice < 1 || choice > 3) // dit zorgt er voor dat je een nummer of afspeellijst kan afspelen
         {
             Console.WriteLine("Ongeldige keuze. Probeer opnieuw.");
             PlaySongOrPlaylist();
             return;
         }
 
-        switch (choice)
+        switch (choice) // dit zorgt er voor dat je een nummer of afspeellijst kan afspelen
         {
             case 1:
                 PlayPlaylistRandom(playlist);
@@ -251,7 +251,7 @@ class Program
         }
     }
 
-    static void PlayPlaylistRandom(Playlist playlist)
+    static void PlayPlaylistRandom(Playlist playlist) // dit zorgt er voor dat je een nummer of afspeellijst kan afspelen
     {
         List<Song> songs = playlist.GetSongs();
 
@@ -265,8 +265,8 @@ class Program
         Console.WriteLine("De playlist '" + playlist.Name + "' wordt willekeurig afgespeeld...");
         Console.WriteLine("Je kunt pauzeren met p en skippen met s.");
 
-        Random random = new Random();
-        int currentSongIndex = random.Next(0, songs.Count);
+        Random random = new Random(); // dit zorgt er voor dat je een nummer of afspeellijst kan afspelen
+        int currentSongIndex = random.Next(0, songs.Count); // dit zorgt er voor dat je een nummer of afspeellijst kan afspelen
 
         while (true)
         {
@@ -292,7 +292,7 @@ class Program
         ReturnToMenu();
     }
 
-    static void PlayPlaylist(Playlist playlist)
+    static void PlayPlaylist(Playlist playlist) // dit zorgt er voor dat je een nummer of afspeellijst kan afspelen
     {
         List<Song> songs = playlist.GetSongs();
 
@@ -306,7 +306,7 @@ class Program
         Console.WriteLine("De playlist '" + playlist.Name + "' wordt afgespeeld...");
         Console.WriteLine("Je kunt pauzeren met p en skippen met s.");
 
-        foreach (Song song in songs)
+        foreach (Song song in songs) // dit is een foreach loop
         {
             Console.WriteLine("Nu wordt afgespeeld: " + song.Name);
             PlaySong(song);
@@ -323,7 +323,7 @@ class Program
         ReturnToMenu();
     }
 
-    static void PlayIndividualSong(Playlist playlist)
+    static void PlayIndividualSong(Playlist playlist) // dit zorgt er voor dat je een nummer of afspeellijst kan afspelen en dit is een foreach loop
     {
         Console.WriteLine("Kies een nummer om af te spelen:");
 
@@ -350,7 +350,7 @@ class Program
         ReturnToMenu();
     }
 
-    static void PlaySong(Song song)
+    static void PlaySong(Song song) // dit zorgt er voor dat je een nummer of afspeellijst kan afspelen
     {
         Console.WriteLine(song.Name + " wordt afgespeeld...");
 
@@ -369,7 +369,7 @@ class Program
                     while (true)
                     {
                         keyInfo = Console.ReadKey(true);
-                        if (keyInfo.KeyChar == 'p')
+                        if (keyInfo.KeyChar == 'p') // dit zorgt er voor dat je een nummer of afspeellijst kan afspelen
                         {
                             Console.WriteLine("\nHet afspelen wordt hervat...");
                             break;
@@ -381,7 +381,7 @@ class Program
                         }
                     }
                 }
-                else if (keyInfo.KeyChar == 's')
+                else if (keyInfo.KeyChar == 's') // dit zorgt er voor dat je een nummer of afspeellijst kan afspelen
                 {
                     Console.WriteLine("\nHet nummer wordt overgeslagen...");
                     return;
@@ -394,7 +394,7 @@ class Program
 
 
 
-    static void ViewAllSongs()
+    static void ViewAllSongs() // di
     {
         Console.WriteLine("Je hebt gekozen voor 'Alle songs bekijken'.");
         ReturnToMenu();
@@ -533,7 +533,7 @@ static Playlist FindPlaylist(string playlistName)
             Console.WriteLine("6. Nieuwe gebruiker aanmaken");
             Console.WriteLine("7. Playlist inzien van vrienden");
 
-            string userInput = Console.ReadLine();
+            string userInput = Console.ReadLine(); // Lees de invoer van de gebruiker
             int choice;
 
             if (int.TryParse(userInput, out choice))
@@ -577,7 +577,7 @@ static Playlist FindPlaylist(string playlistName)
         }
     }
 
-    static void Login()
+    static void Login() //soort van Inloggen met alleen een naam invoeren
     {
         Console.Write("Voer je gebruikersnaam in: ");
         string username = Console.ReadLine();
@@ -596,7 +596,7 @@ static Playlist FindPlaylist(string playlistName)
         ManageFriends();
     }
 
-    static void ViewFriends()
+    static void ViewFriends() // Vrienden weergeven
     {
         List<User> friends = currentUser.GetFriends();
 
@@ -616,7 +616,7 @@ static Playlist FindPlaylist(string playlistName)
         ReturnToMenu();
     }
 
-    static void AddFriend()
+    static void AddFriend() // Vriend toevoegen
     {
         Console.WriteLine("Voer de gebruikersnaam van je vriend in:");
         string friendUsername = Console.ReadLine();
@@ -636,7 +636,7 @@ static Playlist FindPlaylist(string playlistName)
         ReturnToMenu();
     }
 
-    static void RemoveFriend()
+    static void RemoveFriend() // Vriend verwijderen (werkt niet naar hoe ik het wil :( )
     {
         Console.WriteLine("Voer de gebruikersnaam van de vriend die je wilt verwijderen in:");
         string friendUsername = Console.ReadLine();
@@ -656,7 +656,7 @@ static Playlist FindPlaylist(string playlistName)
         ReturnToMenu();
     }
 
-    static void ChangeUser()
+    static void ChangeUser() // Gebruiker wijzigen
     {
         Console.WriteLine("Voer de gebruikersnaam van de nieuwe gebruiker in:");
         string newUsername = Console.ReadLine();
@@ -675,7 +675,7 @@ static Playlist FindPlaylist(string playlistName)
         ReturnToMenu();
     }
 
-    static void ShowExistingUsers()
+    static void ShowExistingUsers() // Bestaande gebruikers weergeven
     {
         Console.WriteLine("Bestaande gebruikers:");
 
@@ -687,7 +687,7 @@ static Playlist FindPlaylist(string playlistName)
         ReturnToMenu();
     }
 
-    static void CreateNewUser()
+    static void CreateNewUser() // Nieuwe gebruiker aanmaken
     {
         Console.WriteLine("Voer de gebruikersnaam van de nieuwe gebruiker in:");
         string newUsername = Console.ReadLine();
@@ -707,7 +707,7 @@ static Playlist FindPlaylist(string playlistName)
         ReturnToMenu();
     }
 
-    static void ViewFriendPlaylists()
+    static void ViewFriendPlaylists() // Playlist inzien van vrienden
     {
         List<User> friends = currentUser.GetFriends();
 
@@ -722,12 +722,12 @@ static Playlist FindPlaylist(string playlistName)
             string userInput = Console.ReadLine();
             int friendIndex;
 
-            if (int.TryParse(userInput, out friendIndex))
+            if (int.TryParse(userInput, out friendIndex)) // Als de gebruiker een geldig getal heeft ingevoerd
             {
-                if (friendIndex >= 1 && friendIndex <= friends.Count)
+                if (friendIndex >= 1 && friendIndex <= friends.Count) // Als de gebruiker een geldige keuze heeft gemaakt
                 {
                     User selectedFriend = friends[friendIndex - 1];
-                    List<Playlist> playlists = selectedFriend.GetPlaylists();
+                    List<Playlist> playlists = selectedFriend.GetPlaylists(); // Hier wordt de lijst met afspeellijsten van de geselecteerde vriend opgehaald
 
                     if (playlists.Count > 0)
                     {
@@ -739,7 +739,7 @@ static Playlist FindPlaylist(string playlistName)
                     }
                     else
                     {
-                        Console.WriteLine($"{selectedFriend.Username} heeft geen afspeellijsten.");
+                        Console.WriteLine($"{selectedFriend.Username} heeft geen afspeellijsten."); // Als je vriend geen afspeellijsten heeft
                     }
                 }
                 else
@@ -754,20 +754,20 @@ static Playlist FindPlaylist(string playlistName)
         }
         else
         {
-            Console.WriteLine("Je hebt geen vrienden.");
+            Console.WriteLine("Je hebt geen vrienden."); // Als je geen vrienden hebt
         }
 
         ReturnToMenu();
     }
 
-    static User CreateUser(string username)
+    static User CreateUser(string username) // Methode om een gebruiker aan te maken
     {
         User newUser = new User(username);
         users.Add(newUser);
         return newUser;
     }
 
-    static User FindUser(string username)
+    static User FindUser(string username) // Methode om een gebruiker te vinden
     {
         foreach (User user in users)
         {
@@ -780,7 +780,7 @@ static Playlist FindPlaylist(string playlistName)
         return null;
     }
 
-    static void ReturnToMenu()
+    static void ReturnToMenu() // Methode om terug te keren naar het hoofdmenu
     {
         Console.WriteLine("Druk op een toets om terug te keren naar het hoofdmenu.");
         Console.ReadKey();
